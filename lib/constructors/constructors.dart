@@ -27,11 +27,21 @@ class User {
 }
 
 void main() {
-  const toto = User(firstName: 'Toto', lastName: 'Tata');
+  const toto = User(
+    firstName: 'Toto',
+    lastName: 'Tata',
+  );
   const dummy = User.big();
 
-  const user1 = User(firstName: 'Toto', lastName: 'Toto');
-  const user2 = User(firstName: 'Toto', lastName: 'Toto');
+  const user1 = User(
+    firstName: 'Toto',
+    lastName: 'Toto',
+  );
+
+  const user2 = User(
+    firstName: 'Toto',
+    lastName: 'Toto',
+  );
 
   print(user1 == user2);
 

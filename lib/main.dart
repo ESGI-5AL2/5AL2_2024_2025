@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           displayMedium: TextStyle(
             fontSize: 24,
-            color: Colors.green,
+            color: Colors.orange,
           ),
         ),
       ),
-      home: const Home(),
+      home: Home(),
     );
   }
 }

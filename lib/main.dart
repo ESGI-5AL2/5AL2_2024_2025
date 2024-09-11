@@ -1,3 +1,4 @@
+import 'package:al2_2024/exercises/exercise_a.dart';
 import 'package:al2_2024/home.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: Home(),
+      home: const ExerciseA(),
     );
   }
 }

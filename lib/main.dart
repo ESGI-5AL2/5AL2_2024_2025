@@ -1,5 +1,6 @@
 import 'package:al2_2024/exercises/exercise_a.dart';
 import 'package:al2_2024/home.dart';
+import 'package:al2_2024/layouts/layouts.dart';
 import 'package:flutter/material.dart';
 
 import 'exercises/exercise_b.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const ExerciseC(),
+      home: const Layouts(),
     );
   }
 }

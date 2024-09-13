@@ -1,3 +1,5 @@
+import 'package:al2_2024/webservices/app_user.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class WebservicesScreen extends StatelessWidget {
@@ -5,10 +7,33 @@ class WebservicesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          onPressed: _getUsers,
+          child: const Text('Coucou'),
+        ),
+      ),
+    );
   }
 
-  void getUsers() {
-    final url = 'https://reqres.in/api/users?page=1&per_page=5';
+  void _getUsers() async {
+    final dio = Dio(
+      BaseOptions(
+        baseUrl: 'https://reqres.in/api',
+      ),
+    );
+
+    try {
+      final response = await dio.get('/users?page=1&per_page=5');
+
+      final List<AppUser> users = (response.data['data'] as List).map((json) {
+        return AppUser.fomJson(json);
+      }).toList();
+
+      print(users);
+    } catch (error) {
+      print('Error getting users from network: $error');
+    }
   }
 }
